@@ -1,0 +1,23 @@
+Source: samba-mounter
+Section: kde
+Priority: extra
+Maintainer: Leszek Lesner <leszek@zevenos.com>
+Build-Depends: cmake, debhelper (>= 8), pkg-kde-tools, libkf5kcmutils-dev, libkf5i18n-dev, kio-dev, libkf5auth-dev, libkf5solid-dev, libkf5config-dev, extra-cmake-modules
+Standards-Version: 3.9.2
+Homepage: http://www.kde.org/
+
+Package: samba-mounter
+Architecture: any
+Depends: cifs-utils, ${misc:Depends}, ${shlibs:Depends}
+Description: User space Samba mount manager for the Plasma Workspace
+ Manage Samba mounts from within the Plasma Workspace, without having to modify
+ anything manually.
+
+Package: samba-mounter-dbg
+Architecture: any
+Depends: samba-mounter (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: User space Samba mount manager for the Plasma Workspace
+ Manage Samba mounts from within the Plasma Workspace, without having to modify
+ anything manually.
+ .
+ This package contains debugging symbols for samba-mounter

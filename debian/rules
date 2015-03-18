@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with kf5 --parallel --dbg-package=samba-mounter-dbg
+
+NAME?=samba-mounter
+VERSION?=0.1+git$(shell date +%Y%m%d)01
+DIRNAME?=$(NAME)-$(VERSION)
+TARFILE?=$(NAME)_$(VERSION).orig.tar.gz
+
+get-orig-source:
+	git archive --format=tar --prefix=$(DIRNAME)/ --remote=git://anongit.kde.org/scratch/afiestas/samba-mounter HEAD | gzip -c9 > ../$(TARFILE)
+
+../$(TARFILE): get-orig-source
+
+.PHONY: override_dh_auto_test
