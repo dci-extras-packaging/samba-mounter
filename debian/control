@@ -8,7 +8,7 @@ Homepage: http://www.kde.org/
 
 Package: samba-mounter
 Architecture: any
-Depends: cifs-utils, ${misc:Depends}, ${shlibs:Depends}
+Depends: smbclient, cifs-utils, ${misc:Depends}, ${shlibs:Depends}
 Description: User space Samba mount manager for the Plasma Workspace
  Manage Samba mounts from within the Plasma Workspace, without having to modify
  anything manually.
