@@ -1,0 +1,25 @@
+From a7a28ff70fe69e9ce62fa646f421e2c7899f3940 Mon Sep 17 00:00:00 2001
+From: Aleix Pol <aleixpol@kde.org>
+Date: Tue, 21 Jul 2020 02:26:24 +0200
+Subject: [PATCH] Use systemsettings to configure the drives REVERT THIS
+
+++
+---
+ src/sambamounterapp.desktop | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/sambamounterapp.desktop b/src/sambamounterapp.desktop
+index e781afb..ab81bb8 100644
+--- a/src/sambamounterapp.desktop
++++ b/src/sambamounterapp.desktop
+@@ -53,7 +53,7 @@ GenericName[uk]=Ð”Ð¸ÑÐºÐ¸ Ñƒ Ð¼ÐµÑ€ÐµÐ¶Ñ–
+ GenericName[x-test]=xxNetwork Drivesxx
+ GenericName[zh_CN]=ç½‘ç»œé©±åŠ¨å™¨
+ GenericName[zh_TW]=ç¶²è·¯ç¡¬ç¢Ÿ
+-Exec=systemsettings5 sambamount
++Exec=kcmshell5 sambamount
+ Comment=Network Samba Drives
+ Comment[ca]=Unitats Samba de xarxa
+ Comment[ca@valencia]=Unitats Samba de xarxa
+-- 
+GitLab
